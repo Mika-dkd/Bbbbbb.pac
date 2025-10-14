@@ -9,5 +9,9 @@ function FindProxyForURL(url, host) {
                             return "PROXY security-proxy.mydomain.com:8080";
                               }
                                 return "DIRECT";
-                                }
-                                
+                                } 
+
+                                if (isPlainHostName(host) || 
+                                      host.indexOf(".") === -1) {
+                                                return "DIRECT";
+                                      }
