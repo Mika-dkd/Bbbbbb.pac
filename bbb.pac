@@ -10,8 +10,4 @@ function FindProxyForURL(url, host) {
                               }
                                 return "DIRECT";
                                 } 
-
-                                if (isPlainHostName(host) || 
-                                      host.indexOf(".") === -1) {
-                                                return "DIRECT";
-                                      }
+                                
